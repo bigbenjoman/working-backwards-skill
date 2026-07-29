@@ -9,7 +9,7 @@ Drop business speak. Write in language a real customer would use.
 | Bad (internal jargon) | Good (customer language) |
 |-----------------------|--------------------------|
 | "Uses machine learning and quality scoring to optimise content" | "When you use the app, everything you see feels relevant to you" |
-| "Leverage our proprietary AI framework" | "Get instant answers trained on your tutor's teaching style" |
+| "Leverage our proprietary AI framework" | "Get answers drawn from your own team's past tickets" |
 | "Omnichannel commerce solution" | "Buy tickets on our website or app" |
 
 ### 2. Eliminate Weasel Words
@@ -85,7 +85,7 @@ Expect that readers have no time to click links. Don't add any in the press rele
 |---------|----------|
 | Document type | Word (.docx) or Google Docs |
 | Paper size | A4 |
-| Margins | Narrow — 1.25cm left/right, 1.25cm top/bottom |
+| Margins | Word "Narrow" preset — 1.27cm (0.5 inch) all four sides |
 | Font | Arial or Calibri, minimum 10pt |
 | Line spacing | Single |
 | Footer | "[Company] Confidential" centred; Page X of Z right-aligned |
@@ -222,10 +222,16 @@ The leader quote should:
 - Be attributable to a real named person with their title
 - Not repeat what's already in the press release — add new perspective
 
+**If no real leader has been named, do not invent one.** Unlike the customer testimonial — which is fictional by design — the leader quote is attributed to an actual colleague who will be asked to stand behind it. Use a bracketed placeholder instead: `"[Quote]" — [Name], [Title]`, with the quote drafted and the attribution left open for the user to fill or approve. A fabricated executive name in a document that circulates internally is a real problem, not a stylistic one.
+
 **Example:**
 > "Customers who purchase Ultra HD TVs know they need a source for Ultra HD content to complete their experience," said Bill Carr, Vice President of Movies and Music at Amazon. "We're excited to offer them a convenient way to watch great quality Ultra HD movies and TV shows."
 
 ### Customer Testimonial
+
+**The testimonial is fictional at every document stage.** The press release is written as if the product has already launched, so the customer quoting it does not yet exist — including in a validated or growth-stage document. This is not a gap to be filled in later and it is never evidence of demand. Evidence of demand lives in the internal FAQs and the appendix, where it can be sourced and challenged. Do not attach a real customer's name to an invented quote, and do not mark the testimonial `[CITATION NEEDED]` — it is not a claim.
+
+What the stage *does* change is what the quote is informed by: plausibility alone at hypothesis stage, interview insight at validated, observed usage patterns at growth.
 
 The testimonial should:
 - Include a specific name and location/role
@@ -235,4 +241,4 @@ The testimonial should:
 - Reinforce the key benefit through personal experience
 
 **Example:**
-> "My daughter subscribes to three tutors for her GCSEs — Maths, Chemistry, and English — for less than we used to pay for one hour of traditional tutoring," says James Mitchell, parent from Birmingham. "She's more engaged than ever because it feels like following her favourite YouTubers, except she's actually learning."
+> "We used to find out a delivery was disputed six weeks later, when the invoice bounced back," says Dana Whitfield, transport manager at a 14-vehicle haulier in Leeds. "Now the photo and the signature are on the invoice when it goes out, and we've stopped writing off deliveries we actually made."

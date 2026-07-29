@@ -25,9 +25,9 @@ using words your customer would use].
 
 PARAGRAPH 1: THE PROBLEM
 [2-3 sentences. State the customer problem or opportunity with specificity and empathy.
-Make the reader feel the pain. Use data: "UK families currently face an impossible choice:
-pay £500+ monthly for private tutoring that only covers one or two subjects, or rely on
-free resources that lack structure and accountability."]
+Make the reader feel the pain. Use data: "Independent veterinary practices choose between
+£900-a-month software built for 20-vet groups, or a paper diary that loses one appointment
+in twenty."]
 
 PARAGRAPH 2: THE SOLUTION
 [2-3 sentences. Describe what you're launching and how it solves the problem. Stay in
@@ -57,7 +57,9 @@ evening look like using this? What happens over 3 months?]
 PARAGRAPH 8: CUSTOMER TESTIMONIAL
 "[Specific, believable, human-sounding quote. Include name, role/location. Should
 reinforce the key benefit through a personal story. Not generic praise — describe
-what specifically changed.]"
+what specifically changed. Fictional at every document stage — never a real
+customer's name against an invented quote. See writing-guide.md § Customer
+Testimonial.]"
 
 PARAGRAPH 9: CALL TO ACTION
 [1-2 sentences. Where to go, how to get started. Launch date if applicable.]
@@ -73,14 +75,14 @@ PARAGRAPH 9: CALL TO ACTION
 **Bad headline:** "Company launches exciting new innovative platform"
 — Vague, uses empty adjectives, no specifics
 
-**Good problem statement:** "UK families currently face an impossible choice: pay £500+ monthly for private tutoring that only covers one or two subjects, or rely on free resources that lack the structure, interaction and accountability students need."
+**Good problem statement:** "A 12-vehicle haulier spends nine hours a week matching proof-of-delivery photos to invoices by hand, and still writes off 3% of revenue on disputed deliveries it cannot evidence."
 — Specific cost, specific trade-off, empathetic
 
 **Bad problem statement:** "Many customers struggle with finding affordable education solutions."
 — Vague ("many"), no specifics, no empathy
 
-**Good customer testimonial:** "My daughter subscribes to three tutors for her GCSEs — Maths, Chemistry, and English — for less than we used to pay for one hour of traditional tutoring. She's more engaged than ever because it feels like following her favourite YouTubers, except she's actually learning."
-— Specific subjects, specific comparison, believable voice, concrete behaviour
+**Good customer testimonial:** "I used to build the rota in a spreadsheet every Sunday night, then spend half of Monday redoing it after two people swapped shifts. Now the swap goes through before I've opened the laptop, and I found out we'd been overstaffing Tuesdays for a year."
+— Specific routine, specific time saved, believable voice, an unexpected concrete benefit
 
 **Bad customer testimonial:** "This is a great product and I love using it. It has really helped me a lot."
 — Generic, no specifics, could be about anything
@@ -100,13 +102,13 @@ Number sequentially starting from 1. Order: broad → specific.
 3. What does it cost / what's the pricing?
 4. What [subjects/content/features] are available?
 5. How do I sign up / get started?
-6. How do I find [content/features/tutors/etc.]?
+6. How do I find [the content, feature or person I need]?
 7. What are the requirements? (devices, internet, qualifications)
 8. Is it safe / what about privacy?
 9. What happens if [edge case: cancellation, payment failure, poor experience]?
 10. What if I need more help / want to upgrade?
 
-**Segment by audience if applicable.** If you have distinct customer groups (e.g., students, parents, tutors), create sub-sections:
+**Segment by audience if applicable.** If you have distinct customer groups — typically the end user, the buyer who signs off, and any third party such as a supplier or partner — create sub-sections:
 
 ```
 EXTERNAL FAQs — GENERAL
@@ -148,13 +150,15 @@ Continue numbering from where external FAQs left off. Order: strategic → tacti
 2. What is the competitive positioning? (vs each named competitor, including the status quo)
 3. How big is the opportunity? (SOM, with TAM/SAM workings in the appendix — see `references/market-and-competition.md`)
 4. What are the primary risks and mitigations? (table format recommended)
-5. What is the estimated ROI / business case?
-6. What metrics define success? (with specific targets)
-7. What trade-offs were made and why?
-8. How did we select [approach/platform/pricing]? (show options considered)
-9. What is the go-to-market strategy?
-10. What key learnings from research inform this approach?
-11. What other documents exist for deeper detail?
+5. It is a year from now and this has failed — what happened? (pre-mortem. Name the most *likely* failure, not the most dramatic. If no plausible failure can be described, the risk section is incomplete)
+6. Is this the highest-priority use of the team's time? (name what does not get built if this does)
+7. What is the estimated ROI / business case?
+8. What metrics define success? (with specific targets)
+9. What trade-offs were made and why?
+10. How did we select [approach/platform/pricing]? (show options considered)
+11. What is the go-to-market strategy?
+12. What key learnings from research inform this approach?
+13. What other documents exist for deeper detail?
 
 **Internal FAQ answer format for trade-offs:**
 
@@ -239,11 +243,14 @@ SOM: SAM × [share]% = £[Z]/year (≈ [N] customers, year 1)
      Basis for [share]%: [comparable, channel, or capacity argument]
 ```
 
+State the document stage (hypothesis / validated / growth) at the top of this section — it sets how much evidence each figure must carry.
+
 Non-negotiables:
 - Bottoms-up only. A capture percentage is an output, never an input
 - State the implied share of SAM explicitly
 - Reconcile SOM against the KPI targets and against delivery capacity — mismatches here are the most common defect
 - Sourceless numbers are marked `[CITATION NEEDED]`
+- Close with the verdict the sizing supports, not just the number
 
 For internal tools, platform work, defensive features or free products, replace this with the appropriate frame (hours saved, products unblocked, churn prevented, adoption) and say which frame you are using and why.
 
@@ -260,10 +267,14 @@ Use customer decision criteria as dimensions — not feature checkboxes — and 
 As at [Month YYYY]. Sources: [where each competitor claim came from]
 ```
 
+State the document stage at the top of this section, as for market sizing.
+
 Non-negotiables:
 - Name real competitors — never "other solutions in the market". If you cannot name three, say so as a finding
 - Include a status quo / do-nothing column: the spreadsheet, the incumbent habit, the agency
-- **You must lose at least one row.** Winning every dimension is evidence of bias, not superiority
+- **You must lose at least one row to a named competitor.** Winning every dimension is evidence of bias, not superiority. Losing to the status quo does not count — it is free and already installed, so conceding to it costs nothing
+- The Advantage column scores us against named competitors only; the status quo column shows the switching cost you must overcome
+- If the matrix does not fit (table-stakes features, internal tools, compliance work), use the alternative frame in `references/market-and-competition.md` § When Competitive Analysis Needs a Different Frame
 - State whether your advantage is *feature* (closes in months) or *structural* (durable), and answer "why won't the incumbent just build this?"
 - Apply the 90-day response test: if each competitor read the press release tomorrow, what do they do in 90 days?
 
@@ -291,7 +302,7 @@ If the product team has defined tenets (guiding principles for decision-making),
 - **Opinionated** — a tenet that nobody would disagree with is useless
 
 Example:
-> 1. **Measure what matters, build what moves it.** Correlation analysis tells us which behaviours drive growth and retention. Features target those behaviours.
-> 2. **Premium and accessible.** 1:1s serve those who can pay; livestreams serve those who can't. Both matter.
-> 3. **Tutors are the talent, not the inventory.** We invest in their growth, not just their availability.
-> 4. **AI amplifies humans, not replaces them.** AI makes tutors more effective and learning more accessible. It does not substitute for human connection.
+> 1. **Measure what matters, build what moves it.** We ship against the two metrics that predict renewal, not against the loudest request.
+> 2. **The heaviest user wins ties.** When a daily user and an occasional one want opposite things, we optimise for the person who is in here forty times a day.
+> 3. **Boring beats clever.** An operations tool that surprises someone has failed. Predictability is the feature.
+> 4. **Own the handover, not the whole workflow.** We integrate where teams already work rather than asking them to move.

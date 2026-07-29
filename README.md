@@ -17,8 +17,10 @@ When active, the skill guides Claude to:
 - Write **external and internal FAQs** — auto-numbered, ordered broad-to-specific, with trade-offs presented as options with pros and cons.
 - Build an **appendix** — prioritised product backlog (P1–P4), KPIs with targets, market sizing, and competitive analysis.
 - **Size the market bottoms-up** — TAM, SAM and SOM with filters and sources shown, rejecting top-down "we'll capture 1%" reasoning.
-- **Analyse competitors honestly** — named rivals plus the status quo, compared on customer decision criteria, with a rule that you must lose at least one row.
-- Output as `.docx`, Markdown, or plain text.
+- **Analyse competitors honestly** — named rivals plus the status quo, compared on customer decision criteria, with a rule that you must lose at least one row to a *named competitor*.
+- **Scale evidence to the document's stage** — hypothesis, validated or growth. The method never changes; what changes is how much evidence each figure must carry.
+- **Reach a verdict, not just a description** — the analysis maps to a named outcome, including "market too small", "not differentiated" and "deprioritised with a trigger".
+- Output as Markdown or plain text, and `.docx` where a docx skill is installed.
 - Hold the draft against a **quality checklist** before presenting it.
 
 It triggers on phrases like *"Working Backwards"*, *"PR/FAQ"*, *"PRFAQ"*, *"press release and FAQ"*, and requests to write a product proposal, product requirements document, or feature definition in the Amazon narrative style — including partial requests like *"write me a press release for a new feature."*
@@ -90,7 +92,7 @@ You should see `working-backwards` in the list. Then just describe what you want
 
 Getting a strong PR/FAQ out of the skill depends as much on what you bring to it as on the skill itself.
 
-**Come with a customer and a problem, not a solution.** The skill will ask *"who is the customer?"* and *"what is the single problem?"* first. Have specific answers — "parents of GCSE students in the UK," not "users." If you lead with the solution, the document will read backwards.
+**Come with a customer and a problem, not a solution.** The skill will ask *"who is the customer?"* and *"what is the single problem?"* first. Have specific answers — "duty managers at multi-site care homes," not "users." If you lead with the solution, the document will read backwards.
 
 **One problem per document.** If your idea solves several distinct problems, write several PR/FAQs. Cramming multiple problems into one is the most common way these documents lose their edge. Use an umbrella PR/FAQ only to show how a suite of solutions serves one overarching problem.
 
