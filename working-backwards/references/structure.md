@@ -150,15 +150,17 @@ Continue numbering from where external FAQs left off. Order: strategic → tacti
 2. What is the competitive positioning? (vs each named competitor, including the status quo)
 3. How big is the opportunity? (SOM, with TAM/SAM workings in the appendix — see `references/market-and-competition.md`)
 4. What are the primary risks and mitigations? (table format recommended)
-5. It is a year from now and this has failed — what happened? (pre-mortem. Name the most *likely* failure, not the most dramatic. If no plausible failure can be described, the risk section is incomplete)
-6. Is this the highest-priority use of the team's time? (name what does not get built if this does)
-7. What is the estimated ROI / business case?
-8. What metrics define success? (with specific targets)
-9. What trade-offs were made and why?
-10. How did we select [approach/platform/pricing]? (show options considered)
-11. What is the go-to-market strategy?
-12. What key learnings from research inform this approach?
-13. What other documents exist for deeper detail?
+5. What is technically uncertain, and how will we test it? (name the assumptions that could prove unbuildable and the spike that resolves each. This is risk disclosure, not implementation detail — see the distinction in `SKILL.md` § Step 3)
+6. Can a customer reach value without help? (state time to first value, and name anything that forces a call, a migration, training or a change in habit)
+7. It is a year from now and this has failed — what happened? (pre-mortem. Name the most *likely* failure, not the most dramatic. If no plausible failure can be described, the risk section is incomplete)
+8. Is this the highest-priority use of the team's time? (name what does not get built if this does)
+9. What is the estimated ROI / business case? (including whether each customer is profitable to serve, not only whether the market is large)
+10. What metrics define success? (with specific targets, set independently of the SOM rather than derived from it)
+11. What trade-offs were made and why?
+12. How did we select [approach/platform/pricing]? (show options considered)
+13. What is the go-to-market strategy?
+14. What key learnings from research inform this approach?
+15. What other documents exist for deeper detail?
 
 **Internal FAQ answer format for trade-offs:**
 

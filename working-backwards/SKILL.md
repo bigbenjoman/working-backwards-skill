@@ -81,6 +81,8 @@ This is where the core product definition happens. Two sections:
 - What are the trade-offs and why?
 - What data supports this approach?
 - What are the risks and mitigations?
+- What is technically uncertain, and how will we test it? (name the assumptions that could prove unbuildable, and the spike or prototype that resolves each. "We don't yet know whether X is achievable, and we'll find out in week two" is a strong answer)
+- Can a customer reach value without help? (where does onboarding require a call, a migration, training or a behaviour change — and what is the time to first value)
 - It is a year from now and this has failed — what happened? (pre-mortem: name the *most likely* failure, not the most dramatic one)
 - Is this the highest-priority use of the team's time? (say what does not get built if this does)
 - What's the competitive positioning? (vs each named competitor, including the status quo)
@@ -97,7 +99,7 @@ Rules for FAQs:
 - **Present options with pros/cons.** Don't just state a decision — show the alternatives considered
 - **Use data to support decisions.** Include market data, customer research, projections
 - **Use "we" in internal FAQs.** Customer voice in external, company voice in internal
-- **No implementation details.** Describe the customer experience, not how it's built
+- **No implementation details — but technical *risk* is not an implementation detail.** Describe the customer experience, not how it's built. "We'll use React and Postgres" is a design decision and belongs in a technical plan. "We don't know whether this can be done inside 200ms, and that assumption carries the product" is a risk disclosure, and it belongs here: it is exactly what an engineer reading the document is best placed to challenge, and the cheapest thing to discover before a build decision rather than after
 
 ### Step 4: Write the Appendix
 
@@ -163,6 +165,10 @@ Before presenting the document, verify:
 - [ ] Customer unit held constant across TAM, SAM and SOM, and correlated filters not multiplied as independent
 - [ ] Leader quote attributed to a real named person, or left as a bracketed placeholder — never a fabricated name
 - [ ] "Why can't they copy this?" is answered, and the advantage named as feature or structural — feature-only is acceptable at hypothesis stage only if declared temporary with the path to structural named
+- [ ] Technical uncertainties named, each with the spike or test that resolves it
+- [ ] Time to first value stated, and anything blocking unaided onboarding named
+- [ ] SOM reconciled against a KPI target that was set independently, not derived from SOM
+- [ ] Stage not under-declared — any interview, pilot or usage data in the document means at least validated
 - [ ] Pre-mortem answered with a plausible failure, not a token one
 - [ ] Opportunity cost stated — what does not get built if this does
 - [ ] The analysis reaches a stated verdict, not just a description (see `references/market-and-competition.md` § What the Analysis Decides)
@@ -180,7 +186,7 @@ Before presenting the document, verify:
 5. **Missing trade-off analysis.** Every decision had alternatives — show them
 6. **No data.** Assertions without evidence are opinions. Back claims with research, metrics, or projections
 7. **Too long.** Press release > 1 page = unclear thinking. Total document > 6 pages (excl. appendix) = too much
-8. **Implementation details.** "We'll use React and PostgreSQL" doesn't belong anywhere in a PR/FAQ. Describe what the customer sees and does
+8. **Implementation details.** "We'll use React and PostgreSQL" doesn't belong anywhere in a PR/FAQ. Describe what the customer sees and does. Do not let this rule swallow technical *risk*, which does belong: naming what might not be buildable, and how you will find out, is a disclosure rather than a design decision
 9. **Sensitive information.** No customer PII, security details, or credentials
 10. **Top-down market sizing.** "The market is $250B, we'll take 1%" is not analysis. Count customers, multiply by price, show the filters. A capture percentage is an output, never an input
 11. **Winning every row of the competitive matrix.** If you beat every competitor on every dimension, you chose the dimensions you win. Find the rows you lose and include them — and lose to a named competitor, not just to the status quo

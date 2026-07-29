@@ -18,7 +18,7 @@ The **method never changes** — bottoms-up sizing, named competitors, status qu
 
 Two rules hold at every stage:
 
-1. **Declare the stage honestly.** A document that claims hypothesis stage to excuse missing evidence it actually has is worse than one that admits the evidence is thin.
+1. **Declare the stage honestly, and note that under-declaring is the easier abuse.** A document that claims hypothesis stage to excuse missing evidence it actually has is worse than one that admits the evidence is thin — and it is harder to spot, because a thin hypothesis document is exactly what a reader expects to see. Concretely: **if the document draws on any customer conversation, pilot, waitlist or usage data anywhere outside the (fictional) press release testimonial, the stage is at least validated.** You do not get to hold evidence back and claim the lower bar.
 2. **Label assumption vs evidence, line by line.** At hypothesis stage this is the *entire* quality signal. An unsourced number that says it is unsourced is acceptable early; an unsourced number dressed as a fact is not acceptable at any stage.
 
 **Scope.** These bars apply to the figures and claims in the market sizing and competitive analysis. They do **not** apply to the press release customer testimonial, which is aspirational at every stage by design and is not evidence of anything — see `writing-guide.md` § Customer Testimonial. Challenging the testimonial for want of a source is a review error.
@@ -119,7 +119,7 @@ SOM is where documents lose credibility. Rules:
 1. **State the implied share explicitly.** Write "1.5% of SAM" next to the number. Hiding it inside a revenue figure is evasion.
 2. **Justify it with a comparable, not a hope.** "Competitor X reached 4% of this SAM in 18 months with a paid-acquisition model we can match" is a defence. "We think 5% is conservative" is not.
 3. **Anything above 10% of SAM in year one requires a named structural reason** — an existing distribution channel, an installed base, an exclusive partnership, a regulatory position. Without one, it is fantasy. As a rough prior — unsourced, and stated as a heuristic rather than a finding — most new entrants without a distribution advantage land somewhere between 0.1% and 2%. Treat it as a prompt to justify an outlier, not as a benchmark to cite.
-4. **Reconcile SOM with your KPIs.** If SOM implies 1,840 seats and the appendix KPI target says 400, one of them is wrong. This mismatch is the single most common defect. Check it before circulating.
+4. **Reconcile SOM with your KPIs — and say which number came first.** If SOM implies 1,840 seats and the appendix KPI target says 400, one of them is wrong. This mismatch is the single most common defect. Check it before circulating. But note that a KPI target *derived from* SOM is not a reconciliation — it is one number wearing two hats, and it will always agree with itself. The KPI must be independently defensible from delivery capacity or acquisition budget before it is compared. State which of the two you set first.
 5. **Reconcile SOM with capacity.** If SOM implies 613 new customers and onboarding can handle 150, the number is not obtainable.
 
 ### Signals of Weak Market Sizing
@@ -271,7 +271,8 @@ Sizing and competitive work that reaches no verdict is description, not analysis
 
 | What the analysis found | Verdict | What to do |
 |-------------------------|---------|-----------|
-| SOM is material against the cost of building, and the matrix shows a structural advantage | **Go** | Proceed. Record the SOM and the KPI targets together so the next review can check attainment against them |
+| SOM is material against the cost of building, the matrix shows a structural advantage, **and each customer is profitable to serve** (contribution margin positive, or lifetime value above acquisition cost) | **Go** | Proceed. Record the SOM and the KPI targets together so the next review can check attainment against them. A large SOM with negative per-customer economics is not a Go — it is a faster way to lose money |
+| Fewer than three competitors can be named, and the status quo is not a real alternative either | **Category unproven** | Do not proceed on sizing alone — an empty competitive field usually means nobody has established that the problem is worth paying to solve. Run a direct demand test (landing page, pre-sell, letter of intent) before committing build spend |
 | SOM is too small to justify the build | **Market too small** | Widen or re-cut the customer definition, look at an adjacent segment, or stop. State what SOM *would* need to be — a threshold makes this reversible if the market moves |
 | SAM is at or near TAM | **Not analysed** | The number is not wrong, it is unfinished. No real filter has been applied. Return to the business model and name the constraints |
 | SOM contradicts the KPI targets, delivery capacity or the acquisition budget | **Not obtainable** | One of the two figures is wrong. Fix it. Never circulate both and let the reader choose |

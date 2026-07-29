@@ -126,7 +126,7 @@ Getting a strong PR/FAQ out of the skill depends as much on what you bring to it
 
 **One problem per document.** If your idea solves several distinct problems, write several PR/FAQs. Cramming multiple problems into one is the most common way these documents lose their edge. Use an umbrella PR/FAQ only to show how a suite of solutions serves one overarching problem.
 
-**Declare the stage, and declare it honestly.** The skill asks whether you are at **hypothesis** (no users, no interviews), **validated** (interviews or a pilot behind you) or **growth** (a live product with a funnel). This sets how much evidence every figure has to carry. Under-declaring to dodge a bar you could actually clear is the one abuse the system cannot detect for you — and it produces a document that reads thin for no reason.
+**Declare the stage, and declare it honestly.** The skill asks whether you are at **hypothesis** (no users, no interviews), **validated** (interviews or a pilot behind you) or **growth** (a live product with a funnel). This sets how much evidence every figure has to carry. Under-declaring is the easier abuse and the harder one to spot, because a thin hypothesis document is exactly what a reader expects — so the rule is now explicit: if the document draws on any interview, pilot or usage data anywhere, it is at least validated.
 
 **Bring data.** The skill replaces weasel words with numbers ("nearly all customers" → "7.6M customers"; "much faster" → "200ms to 30ms"). Give it real figures — market size, pricing, current baselines, research findings — or it can only draft placeholders for you to fill.
 
@@ -138,7 +138,9 @@ Getting a strong PR/FAQ out of the skill depends as much on what you bring to it
 
 **Lose a row to a real competitor.** Every honest matrix has one. Conceding to the status quo doesn't count — doing nothing is free and already installed, so admitting it beats you costs you nothing and proves nothing.
 
-**Keep implementation out of it.** "We'll use React and PostgreSQL" belongs nowhere in a PR/FAQ. Describe what the customer sees and does. Save the architecture for a separate technical plan.
+**Keep implementation out — but not technical risk.** "We'll use React and PostgreSQL" belongs nowhere in a PR/FAQ; save the architecture for a technical plan. But *"we don't know whether this can be done inside 200ms, and that assumption carries the product"* is a disclosure, not a design decision, and the skill now asks for it. Name what might not be buildable and the spike that settles it — it is the cheapest thing to discover before a build decision rather than after.
+
+**Say whether each customer is worth having.** A large SOM with negative per-customer economics is not a green light. The skill will not reach a "Go" verdict unless contribution margin is positive or lifetime value clears acquisition cost.
 
 **Let it be uncomfortable.** A good problem statement should make you wince at how you treat customers today. Don't sand off the empathy; that discomfort is what creates the will to fix it.
 
