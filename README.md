@@ -15,7 +15,9 @@ When active, the skill guides Claude to:
 - Gather the essentials first — **who** the customer is, the **single** problem, the proposed solution, the launch date, and the key benefit.
 - Write a **one-page press release** in customer language (no jargon, no implementation detail, no weasel words).
 - Write **external and internal FAQs** — auto-numbered, ordered broad-to-specific, with trade-offs presented as options with pros and cons.
-- Build an **appendix** — prioritised product backlog (P1–P4), KPIs with targets, and competitive analysis.
+- Build an **appendix** — prioritised product backlog (P1–P4), KPIs with targets, market sizing, and competitive analysis.
+- **Size the market bottoms-up** — TAM, SAM and SOM with filters and sources shown, rejecting top-down "we'll capture 1%" reasoning.
+- **Analyse competitors honestly** — named rivals plus the status quo, compared on customer decision criteria, with a rule that you must lose at least one row.
 - Output as `.docx`, Markdown, or plain text.
 - Hold the draft against a **quality checklist** before presenting it.
 
@@ -28,7 +30,8 @@ working-backwards/
 ├── SKILL.md                      # Entry point: workflow, voice/tone rules, quality checklist
 └── references/
     ├── structure.md              # Full document template with worked examples
-    └── writing-guide.md          # Narrative best practices, grammar, formatting standards
+    ├── writing-guide.md          # Narrative best practices, grammar, formatting standards
+    └── market-and-competition.md # TAM/SAM/SOM sizing method and competitive analysis
 ```
 
 ---

@@ -1,6 +1,6 @@
 ---
 name: working-backwards
-description: "Write Amazon-style Working Backwards documents (PR/FAQs). Use this skill whenever the user mentions 'Working Backwards', 'PR/FAQ', 'PRFAQ', 'press release and FAQ', 'product definition document', or asks to write a product proposal, product requirements document, or feature definition in the Amazon narrative style. Also trigger when editing, reviewing, or providing feedback on an existing PR/FAQ. This skill covers the full PR/FAQ structure: press release, external FAQs, internal FAQs, appendix, and product backlog. It can output as .docx (using the docx skill), markdown, or plain text. Always use this skill even for partial requests like 'write me a press release for a new feature' or 'help me with the FAQ section of my PR/FAQ'."
+description: "Write Amazon-style Working Backwards documents (PR/FAQs). Use this skill whenever the user mentions 'Working Backwards', 'PR/FAQ', 'PRFAQ', 'press release and FAQ', 'product definition document', or asks to write a product proposal, product requirements document, or feature definition in the Amazon narrative style. Also trigger when editing, reviewing, or providing feedback on an existing PR/FAQ. This skill covers the full PR/FAQ structure: press release, external FAQs, internal FAQs, appendix, product backlog, market sizing (TAM/SAM/SOM) and competitive analysis. It can output as .docx (using the docx skill), markdown, or plain text. Always use this skill even for partial requests like 'write me a press release for a new feature' or 'help me with the FAQ section of my PR/FAQ'."
 ---
 
 # Working Backwards Document (PR/FAQ) Skill
@@ -16,7 +16,8 @@ Generates Amazon-style Working Backwards documents — the methodology that star
 - Creating a new PR/FAQ from scratch
 - Drafting just the press release section
 - Writing external (customer) or internal (stakeholder) FAQs
-- Building the appendix (backlog, KPIs, competitive analysis)
+- Building the appendix (backlog, KPIs, market sizing, competitive analysis)
+- Sizing a market (TAM/SAM/SOM) or building a competitive matrix for a product proposal
 - Reviewing or improving an existing PR/FAQ
 - Converting a product idea into Working Backwards format
 
@@ -63,7 +64,9 @@ This is where the core product definition happens. Two sections:
 - What are the trade-offs and why?
 - What data supports this approach?
 - What are the risks and mitigations?
-- What's the competitive positioning?
+- What's the competitive positioning? (vs each named competitor, including the status quo)
+- How big is the opportunity? (SOM — with TAM/SAM workings in the appendix)
+- Why can't a competitor simply copy this?
 - What's the estimated ROI?
 - What metrics define success?
 - What options were considered?
@@ -82,7 +85,8 @@ Rules for FAQs:
 Include as relevant:
 - **Product Backlog** — Prioritised requirements with P1/P2/P3/P4 ratings (see `references/structure.md` § Priority Definitions)
 - **KPIs** — Success metrics with specific targets
-- **Competitive Analysis** — Competitor experiences and benchmarking
+- **Market Sizing** — TAM, SAM and SOM built bottoms-up, with filters and sources shown (see `references/market-and-competition.md`)
+- **Competitive Analysis** — Named competitors and the status quo, compared on customer decision criteria (see `references/market-and-competition.md`)
 - **Visuals** — Wireframes, user flows, UX mocks (reference only in text)
 - **Supporting Data** — Market research, customer data, financial projections
 - **GTM Tags** — Metrics for measuring feature usage
@@ -125,6 +129,12 @@ Before presenting the document, verify:
 - [ ] FAQs are auto-numbered sequentially
 - [ ] Options presented with pros and cons in internal FAQs
 - [ ] Priority definitions included with backlog
+- [ ] Market sized bottoms-up — no capture percentage used as an input
+- [ ] TAM, SAM and SOM all present, each with filters and sources
+- [ ] SOM reconciles with the KPI targets and with delivery capacity
+- [ ] Competitors named individually, and the status quo included as a column
+- [ ] At least one matrix row where a competitor beats us
+- [ ] "Why can't they copy this?" is answered, and the advantage named as feature or structural
 - [ ] Confidentiality footer included
 - [ ] Passes the "so what" test — a customer would care about this
 - [ ] Leader quote captures the single most important customer value
@@ -141,8 +151,12 @@ Before presenting the document, verify:
 7. **Too long.** Press release > 1 page = unclear thinking. Total document > 6 pages (excl. appendix) = too much
 8. **Implementation details.** "We'll use React and PostgreSQL" doesn't belong anywhere in a PR/FAQ. Describe what the customer sees and does
 9. **Sensitive information.** No customer PII, security details, or credentials
+10. **Top-down market sizing.** "The market is $250B, we'll take 1%" is not analysis. Count customers, multiply by price, show the filters. A capture percentage is an output, never an input
+11. **Winning every row of the competitive matrix.** If you beat every competitor on every dimension, you chose the dimensions you win. Find the rows you lose and include them
+12. **"We have no competitors."** This means the market is unproven, the analysis is incomplete, or customers solve the problem another way and you haven't found it. Never a strength
 
 ## Reference Files
 
 - `references/structure.md` — Full document template with all sections and examples
 - `references/writing-guide.md` — Narrative writing best practices, grammar rules, formatting standards
+- `references/market-and-competition.md` — TAM/SAM/SOM sizing method and competitive analysis

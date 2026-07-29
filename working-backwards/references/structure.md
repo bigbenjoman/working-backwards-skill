@@ -144,16 +144,17 @@ Continue numbering from where external FAQs left off. Order: strategic → tacti
 
 **Standard questions to include:**
 
-1. What are our unique points of difference?
-2. What is the competitive positioning? (vs each named competitor)
-3. What are the primary risks and mitigations? (table format recommended)
-4. What is the estimated ROI / business case?
-5. What metrics define success? (with specific targets)
-6. What trade-offs were made and why?
-7. How did we select [approach/platform/pricing]? (show options considered)
-8. What is the go-to-market strategy?
-9. What key learnings from research inform this approach?
-10. What other documents exist for deeper detail?
+1. What are our unique points of difference? (and why can't a competitor copy them?)
+2. What is the competitive positioning? (vs each named competitor, including the status quo)
+3. How big is the opportunity? (SOM, with TAM/SAM workings in the appendix — see `references/market-and-competition.md`)
+4. What are the primary risks and mitigations? (table format recommended)
+5. What is the estimated ROI / business case?
+6. What metrics define success? (with specific targets)
+7. What trade-offs were made and why?
+8. How did we select [approach/platform/pricing]? (show options considered)
+9. What is the go-to-market strategy?
+10. What key learnings from research inform this approach?
+11. What other documents exist for deeper detail?
 
 **Internal FAQ answer format for trade-offs:**
 
@@ -223,16 +224,48 @@ Format each KPI with:
 - Measurement method
 - Timeframe
 
+### Market Sizing
+
+Show TAM, SAM and SOM, each built bottoms-up with its arithmetic, filters and sources visible. See `references/market-and-competition.md` § Market Sizing for the full method, worked example and failure signals.
+
+```
+TAM: [population count] × [annual revenue per customer] = £[X]/year
+     Source: [source, year]
+
+SAM: TAM × [filter 1: %] × [filter 2: %] = £[Y]/year
+     Filters: [what each represents, with source]
+
+SOM: SAM × [share]% = £[Z]/year (≈ [N] customers, year 1)
+     Basis for [share]%: [comparable, channel, or capacity argument]
+```
+
+Non-negotiables:
+- Bottoms-up only. A capture percentage is an output, never an input
+- State the implied share of SAM explicitly
+- Reconcile SOM against the KPI targets and against delivery capacity — mismatches here are the most common defect
+- Sourceless numbers are marked `[CITATION NEEDED]`
+
+For internal tools, platform work, defensive features or free products, replace this with the appropriate frame (hours saved, products unblocked, churn prevented, adoption) and say which frame you are using and why.
+
 ### Competitive Analysis
 
-Use a comparison matrix:
+Use customer decision criteria as dimensions — not feature checkboxes — and always include the status quo. See `references/market-and-competition.md` § Competitive Analysis.
 
 ```
-| Dimension | Us | Competitor A | Competitor B |
-|-----------|-----|-------------|-------------|
-| [Dimension 1] | [Our approach] | [Their approach] | [Their approach] |
-| [Dimension 2] | ... | ... | ... |
+| Dimension (customer decision criterion) | Us | Competitor A | Competitor B | Status quo (today) | Advantage |
+|---|---|---|---|---|---|
+| [Criterion 1] | ... | ... | ... | ... | [who wins] |
+| [Criterion 2] | ... | ... | ... | ... | [who wins] |
+
+As at [Month YYYY]. Sources: [where each competitor claim came from]
 ```
+
+Non-negotiables:
+- Name real competitors — never "other solutions in the market". If you cannot name three, say so as a finding
+- Include a status quo / do-nothing column: the spreadsheet, the incumbent habit, the agency
+- **You must lose at least one row.** Winning every dimension is evidence of bias, not superiority
+- State whether your advantage is *feature* (closes in months) or *structural* (durable), and answer "why won't the incumbent just build this?"
+- Apply the 90-day response test: if each competitor read the press release tomorrow, what do they do in 90 days?
 
 ### Other Appendices
 
