@@ -1,0 +1,34 @@
+{
+  "name": "working-backwards-skill",
+  "description": "Amazon-style Working Backwards (PR/FAQ) tooling for Claude Code.",
+  "owner": {
+    "name": "bigbenjoman",
+    "url": "https://github.com/bigbenjoman"
+  },
+  "plugins": [
+    {
+      "name": "working-backwards",
+      "source": "./",
+      "description": "Write Amazon-style Working Backwards documents — press release, external and internal FAQs, appendix, bottoms-up market sizing and competitive analysis.",
+      "version": "1.0.0",
+      "author": {
+        "name": "bigbenjoman",
+        "url": "https://github.com/bigbenjoman"
+      },
+      "homepage": "https://github.com/bigbenjoman/working-backwards-skill",
+      "repository": "https://github.com/bigbenjoman/working-backwards-skill",
+      "license": "MIT",
+      "category": "product",
+      "tags": [
+        "product-management",
+        "pr-faq",
+        "prfaq",
+        "working-backwards",
+        "amazon",
+        "press-release",
+        "market-sizing",
+        "competitive-analysis"
+      ]
+    }
+  ]
+}

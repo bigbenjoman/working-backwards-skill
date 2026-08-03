@@ -1,6 +1,6 @@
 # Working Backwards Skill
 
-A [Claude](https://claude.com/claude-code) Skill for writing Amazon-style **Working Backwards** documents — **PR/FAQs** (Press Release + Frequently Asked Questions).
+A [Claude](https://claude.com/claude-code) Skill for writing Amazon-style **Working Backwards** documents — **PR/FAQs** (Press Release + Frequently Asked Questions). Installs as a Claude Code plugin in two commands, or drop the skill folder in by hand.
 
 The Working Backwards method starts with the customer and works backwards to the product. Instead of building something and then figuring out how to pitch it, you write the launch announcement *first* — forcing clarity on who the customer is, what problem you're solving, and why anyone should care, before a line of code is written. The output is a one-page press release plus a set of FAQs and an appendix.
 
@@ -28,52 +28,78 @@ It triggers on phrases like *"Working Backwards"*, *"PR/FAQ"*, *"PRFAQ"*, *"pres
 ## Contents
 
 ```
-working-backwards/
-├── SKILL.md                      # Entry point: workflow, voice/tone rules, quality checklist
-└── references/
-    ├── structure.md              # Full document template with worked examples
-    ├── writing-guide.md          # Narrative best practices, grammar, formatting standards
-    └── market-and-competition.md # TAM/SAM/SOM sizing method and competitive analysis
+.claude-plugin/
+├── plugin.json                       # Plugin manifest
+└── marketplace.json                  # Marketplace catalog (this repo is its own marketplace)
+skills/
+└── working-backwards/
+    ├── SKILL.md                      # Entry point: workflow, voice/tone rules, quality checklist
+    └── references/
+        ├── structure.md              # Full document template with worked examples
+        ├── writing-guide.md          # Narrative best practices, grammar, formatting standards
+        └── market-and-competition.md # TAM/SAM/SOM sizing method and competitive analysis
 ```
+
+It is markdown all the way down — **no binaries, no scripts, nothing to install alongside it**. If Claude ever tells you a CLI tool is required before it can write a PR/FAQ, that instruction came from somewhere else in your setup, not from this skill.
 
 ---
 
 ## Installation
 
-This is a Claude Skill. Skills are folders containing a `SKILL.md` file; Claude loads them on demand when a task matches the skill's description. Pick whichever scope fits.
+This repo ships as a **Claude Code plugin** and doubles as its own plugin marketplace, so installing it is two commands. Copy-paste routes are kept below for Claude.ai and for anyone who'd rather not use plugins.
 
-> **Note:** the skill folder is `working-backwards/` inside this repo. Install *that folder* (not the repo root) into your skills directory. The folder name becomes the skill name.
+### Option A — Plugin (recommended)
 
-### Option A — Personal skill (available in every project)
+In Claude Code:
 
-Installs to your home directory so the skill is available across all your work.
-
-```bash
-git clone https://github.com/bigbenjoman/working-backwards-skill.git
-mkdir -p ~/.claude/skills
-cp -R working-backwards-skill/working-backwards ~/.claude/skills/
+```
+/plugin marketplace add bigbenjoman/working-backwards-skill
+/plugin install working-backwards@working-backwards-skill
 ```
 
-### Option B — Project skill (shared with your team via the repo)
-
-Installs into a project so it's version-controlled and available to everyone who clones that project.
+Or from your shell:
 
 ```bash
+claude plugin marketplace add bigbenjoman/working-backwards-skill
+claude plugin install working-backwards@working-backwards-skill
+```
+
+The install command asks for a scope — **user** makes it available in every project, **project** commits it to the repo you're in, **local** keeps it to that one project without committing.
+
+Updating later:
+
+```
+/plugin marketplace update working-backwards-skill
+```
+
+### Option B — Copy the skill folder in by hand
+
+Skills are just folders containing a `SKILL.md`. Copy `skills/working-backwards/` into a skills directory and Claude will load it on demand.
+
+```bash
+# personal — available in every project
+git clone https://github.com/bigbenjoman/working-backwards-skill.git
+mkdir -p ~/.claude/skills
+cp -R working-backwards-skill/skills/working-backwards ~/.claude/skills/
+```
+
+```bash
+# project — version-controlled, shared with your team
 # from the root of your project
 mkdir -p .claude/skills
 git clone https://github.com/bigbenjoman/working-backwards-skill.git /tmp/wb-skill
-cp -R /tmp/wb-skill/working-backwards .claude/skills/
+cp -R /tmp/wb-skill/skills/working-backwards .claude/skills/
 ```
 
 Commit `.claude/skills/working-backwards/` and your teammates get the skill automatically.
 
 ### Option C — Claude.ai / Claude Desktop
 
-Upload the skill as a `.zip` in **Settings → Capabilities → Skills**. Zip the `working-backwards` folder so the archive contains `working-backwards/SKILL.md` at its top level:
+Upload the skill as a `.zip` in **Settings → Capabilities → Skills**. Zip the skill folder so the archive contains `working-backwards/SKILL.md` at its top level:
 
 ```bash
-cd working-backwards-skill
-zip -r working-backwards.zip working-backwards
+cd working-backwards-skill/skills
+zip -r ../working-backwards.zip working-backwards
 ```
 
 ### Verify it's installed
@@ -84,7 +110,7 @@ Open Claude Code and run:
 /skills
 ```
 
-You should see `working-backwards` in the list. Then just describe what you want — e.g. *"Write a PR/FAQ for a new feature that…"* — and Claude will load the skill automatically. You can also invoke it explicitly with `/working-backwards`.
+You should see `working-backwards` in the list — as `working-backwards:working-backwards` if you installed the plugin, since plugin skills are namespaced by plugin name. Either way, just describe what you want — e.g. *"Write a PR/FAQ for a new feature that…"* — and Claude loads the skill automatically. `/plugin` shows the plugin's install state and lets you disable or remove it.
 
 ---
 
@@ -154,7 +180,7 @@ Getting a strong PR/FAQ out of the skill depends as much on what you bring to it
 
 **Use the quality checklist as a gate, not a formality.** Before you circulate, walk the checklist at the end of `SKILL.md`. If it fails the *"so what?"* test — would a customer actually care? — the idea isn't ready, however polished the prose.
 
-**Treat the first draft as a draft.** At Amazon a PR/FAQ typically takes 2+ weeks to a first review and a month to approval. Iterate: point the skill at the existing file and it revises in place rather than regenerating over your edits. See `references/writing-guide.md` § The Review Process for how to run a silent-reading review meeting.
+**Treat the first draft as a draft.** At Amazon a PR/FAQ typically takes 2+ weeks to a first review and a month to approval. Iterate: point the skill at the existing file and it revises in place rather than regenerating over your edits. See `skills/working-backwards/references/writing-guide.md` § The Review Process for how to run a silent-reading review meeting.
 
 ---
 

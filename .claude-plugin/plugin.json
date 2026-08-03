@@ -1,0 +1,25 @@
+{
+  "name": "working-backwards",
+  "displayName": "Working Backwards (PR/FAQ)",
+  "version": "1.0.0",
+  "description": "Write Amazon-style Working Backwards documents — a one-page press release, external and internal FAQs, and an appendix with product backlog, KPIs, bottoms-up market sizing and competitive analysis.",
+  "author": {
+    "name": "bigbenjoman",
+    "url": "https://github.com/bigbenjoman"
+  },
+  "homepage": "https://github.com/bigbenjoman/working-backwards-skill",
+  "repository": "https://github.com/bigbenjoman/working-backwards-skill",
+  "license": "MIT",
+  "keywords": [
+    "product-management",
+    "pr-faq",
+    "prfaq",
+    "working-backwards",
+    "amazon",
+    "press-release",
+    "product-strategy",
+    "market-sizing",
+    "competitive-analysis",
+    "writing"
+  ]
+}

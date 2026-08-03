@@ -11,6 +11,8 @@ Generates Amazon-style Working Backwards documents — the methodology that star
 
 **Before writing anything**, read `references/structure.md` for the full document template, `references/writing-guide.md` for narrative writing best practices, and `references/market-and-competition.md` for the sizing and competitive method — the last of these is needed in Step 3, not just at the appendix.
 
+**This skill has no dependencies.** It is markdown and reference files only — no CLI tools, no binaries, no scripts, nothing to install. Never tell the user that some external tool is required before you can start writing. The one optional extra is a docx skill, and only if they ask for a Word file (Step 5); without it, output markdown.
+
 ## When to Use
 
 - Creating a new PR/FAQ from scratch
