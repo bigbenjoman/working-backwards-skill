@@ -1,5 +1,7 @@
 # Working Backwards Skill
 
+> This skill is also part of [Product Skills](https://github.com/bigbenjoman/product-skills), a set of agent skills for finding, shaping, building and running products.
+
 A [Claude](https://claude.com/claude-code) Skill for writing Amazon-style **Working Backwards** documents — **PR/FAQs** (Press Release + Frequently Asked Questions). Installs as a Claude Code plugin in two commands, or drop the skill folder in by hand.
 
 The Working Backwards method starts with the customer and works backwards to the product. Instead of building something and then figuring out how to pitch it, you write the launch announcement *first* — forcing clarity on who the customer is, what problem you're solving, and why anyone should care, before a line of code is written. The output is a one-page press release plus a set of FAQs and an appendix.
